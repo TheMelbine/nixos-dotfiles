@@ -5,8 +5,8 @@ imports = [
 ./fish.nix
 ./hyprland.nix
 ./neovim.nix
-./ags.nix 
+./agsWidgets/ags.nix 
 ./cursor.nix
-./discordKrisp.nix
+./discordKrispPatch/discordKrisp.nix
 ];
 }

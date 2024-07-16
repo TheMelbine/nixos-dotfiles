@@ -8,18 +8,18 @@ in {
     allowUnfree = true;
   };
 
-  programs.hyprland.enable = true;
-  programs.steam.enable = true;
-  programs.fish.enable = true;
+  programs = {
+    hyprland.enable = true;
+    steam.enable = true;
+    fish.enable = true;
+  };
 
   fonts.packages = with pkgs; [
       jetbrains-mono
-      (import ./fonts/nerd-fonts-symbols.nix { inherit (pkgs) stdenv fetchzip lib; })
+      customPackages.nerdFontsSymbols
   ];
 
   environment.systemPackages = with pkgs; [
-
-(import ./scripts/toggle.nix { inherit pkgs; })
 
     # Development tools
     git
@@ -34,6 +34,9 @@ in {
     kitty
     xdg-utils
     nfs-utils
+
+    # Custom utilities
+    customPackages.toggleScript
 
     # Multimedia
     vlc

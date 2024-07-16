@@ -11,9 +11,8 @@
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
-        "XCURSOR_SIZE,36"
         "QT_QPA_PLATFORM,wayland"
-        "XDG_SCREENSHOTS_DIR,~/screens"
+        "XDG_SCREENSHOTS_DIR,/home/melbine/Pictures/Screenshots"
       ];
 
       debug = {
@@ -34,11 +33,11 @@
         "col.active_border" = "rgba(657452ee)";
         "col.inactive_border" = "rgba(595959aa)";
         layout = "dwindle";
-
       };
-cursor = {
-  no_hardware_cursors = false;
-};
+
+      cursor = {
+        no_hardware_cursors = false;
+      };
 
       decoration = {
         rounding = 7;
@@ -49,88 +48,76 @@ cursor = {
           passes = 6;
           new_optimizations = true;
         };
-
       };
 
       animations = {
         enabled = true;
 
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.00";
-        # bezier = "myBezier, 0.33, 0.82, 0.9, -0.08";
+        # bezier = "myBezier, 0.33, 82, 0.9, -0.08";
 
         animation = [
-          "windows,     1, 7,  myBezier, slide"
-          "windowsOut,  1, 7,  myBezier,slide"
-          "border,      1, 10, default"
-          "borderangle, 1, 8,  default"
-          "fade,        1, 7,  default"
-          "workspaces,  1, 6,  default"
+          "windows, 1, 7, myBezier, slide"
+          "windowsOut, 1, 7, myBezier, slide"
+          "border, 1, 10, default"
+          "borderangle, 1, 8, default"
+          "fade, 1, 7, default"
+          "workspaces, 1, 6, default"
         ];
       };
 
       dwindle = {
-           pseudotile =  true;
-    split_width_multiplier = 1.25;
-    force_split = 2;
-    preserve_split = true;
-    };
-
-
-      master = {
+        pseudotile = true;
+        split_width_multiplier = 1.25;
+        force_split = 2;
+        preserve_split = true;
       };
 
       misc = {
-    	focus_on_activate = true;
-    	disable_splash_rendering = false;
-    	disable_hyprland_logo = true;
-    	vrr = 1;
-        no_direct_scanout = true;
-    	force_default_wallpaper = 0;
-    
-	};
+        focus_on_activate = true;
+        disable_splash_rendering = false;
+        disable_hyprland_logo = true;
+        force_default_wallpaper = 0;
+      };
 
-     windowrule = [
-           ];
+      windowrule = [];
 
       exec-once = [
-        "swww init"
-        "ags -c /home/melbine/nix/home-manager/ags/config.js"
+        "swww-daemon --format xrgb"
       ];
 
       bind = [
-        "$mainMod, R, exec, ags -t launcher" 
-        "$mainMod, Tab, exec, ags -t overview"
         "$mainMod, Return, exec, kitty"
         "$mainMod, Q, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, F, fullscreen,"
-        "$mainMod, D, exec, rofi -show drun"
+        "$mainMod, D, exec, toggle rofi -show drun"
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, T, togglesplit, # dwindle"
 
         # Move focus with mainMod + arrow keys
-        "$mainMod, h,  movefocus, l"
+        "$mainMod, h, movefocus, l"
         "$mainMod, l, movefocus, r"
-        "$mainMod, k,    movefocus, u"
-        "$mainMod, j,  movefocus, d"
+        "$mainMod, k, movefocus, u"
+        "$mainMod, j, movefocus, d"
 
         # Moving windows
-        "$mainMod SHIFT, h,  swapwindow, l"
+        "$mainMod SHIFT, h, swapwindow, l"
         "$mainMod SHIFT, l, swapwindow, r"
-        "$mainMod SHIFT, k,    swapwindow, u"
-        "$mainMod SHIFT, j,  swapwindow, d"
+        "$mainMod SHIFT, k, swapwindow, u"
+        "$mainMod SHIFT, j, swapwindow, d"
 
         # Window resizing                     X  Y
-        "$mainMod CTRL, h,  resizeactive, -60 0"
-        "$mainMod CTRL, l, resizeactive,  60 0"
-        "$mainMod CTRL, k,    resizeactive,  0 -60"
-        "$mainMod CTRL, j,  resizeactive,  0  60"
+        "$mainMod CTRL, h, resizeactive, -60 0"
+        "$mainMod CTRL, l, resizeactive, 60 0"
+        "$mainMod CTRL, k, resizeactive, 0 -60"
+        "$mainMod CTRL, j, resizeactive, 0 60"
 
         # Switch workspaces with mainMod + [0-9]
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
         "$mainMod, 3, workspace, 3"
-        "$mainMod, 4, workspace, 4/cu/."
+        "$mainMod, 4, workspace, 4"
         "$mainMod, 5, workspace, 5"
         "$mainMod, 6, workspace, 6"
         "$mainMod, 7, workspace, 7"
@@ -149,7 +136,12 @@ cursor = {
         "$mainMod SHIFT, 8, movetoworkspacesilent, 8"
         "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
         "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
-];
+
+        # Screenshot and screen recording
+        " , Print, exec, grimblast copysave screen"
+        "$mainMod SHIFT, S, exec, grimblast --freeze copy area"
+        "$mainMod SHIFT, R, exec, toggle wl-screenrec -f /home/melbine/Videos/recording-$(date +'%Y-%m-%d_%H-%M-%S').mp4"
+      ];
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
       bindm = [
@@ -159,3 +151,4 @@ cursor = {
     };
   };
 }
+

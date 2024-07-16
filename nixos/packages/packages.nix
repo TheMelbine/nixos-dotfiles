@@ -15,7 +15,7 @@
 
   environment.systemPackages = with pkgs; [
 
-(import ./scripts/toggle.nix { inherit (pkgs) stdenv writeScriptBin; })
+(import ./scripts/toggle.nix { inherit pkgs; })
 
     # Development tools
     git

@@ -1,12 +1,8 @@
 { pkgs, ... }: {
 
-
-
-
   nixpkgs.config = {
     allowUnfree = true;
   };
-
 
   programs.hyprland.enable = true;
   programs.steam.enable = true;
@@ -14,6 +10,7 @@
 
   fonts.packages = with pkgs; [
       jetbrains-mono
+      (import ./fonts/nerd-fonts-symbols.nix { inherit (pkgs) stdenv fetchzip lib; })
   ];
 
   environment.systemPackages = with pkgs; [

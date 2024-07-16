@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+
+let
+ customPackages = import ./customPackages/bundle.nix { inherit pkgs; };
+in {
 
   nixpkgs.config = {
     allowUnfree = true;

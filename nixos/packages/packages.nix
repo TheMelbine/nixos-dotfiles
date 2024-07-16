@@ -14,8 +14,12 @@
   ];
 
   environment.systemPackages = with pkgs; [
+
+(import ./scripts/toggle.nix { inherit (pkgs) stdenv writeScriptBin; })
+
     # Development tools
     git
+    gcc
     fpc
     neovim
     vscode
@@ -43,8 +47,9 @@
     # Screenshot and screen recording
     slurp
     grimblast
-    wl-screenrec
     obs-studio
+    wl-screenrec
+    xdg-desktop-portal-hyprland
 
     # System information
     fastfetch
@@ -69,9 +74,7 @@
     obsidian
 
     # Miscellaneous
-    todoist
     home-manager
-    read-edid
   ];
 
 }

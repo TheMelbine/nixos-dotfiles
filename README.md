@@ -3,12 +3,12 @@
 # 🗒 About
 This repository contains my personal configurations for Home-Manager and NixOS, enhanced with select external elements. It is designed to provide a robust and flexible setup for various systems.
 
-> ⚠️ **Warning**  
-> These dotfiles are still under development. If anyone wishes to use them, please do so at your own risk.
-
 ## 💻 Desktop preview
 
 <img src="https://i.imgur.com/wbRhA1a.png" alt="Desktop Preview">
+
+> ⚠️ **Warning**  
+> These dotfiles are still under development. If anyone wishes to use them, please do so at your own risk.
 
 ## Hyprland Keybinds ⌨️
 <details>

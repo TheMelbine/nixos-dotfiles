@@ -40,3 +40,4 @@
 - **Move Window with Drag**: `SUPER + Left Mouse Button`
 - **Resize Window with Drag**: `SUPER + Right Mouse Button`
 
+

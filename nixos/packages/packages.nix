@@ -32,6 +32,7 @@ in {
     # System utilities
     wget
     kitty
+    zoxide
     xdg-utils
     nfs-utils
 

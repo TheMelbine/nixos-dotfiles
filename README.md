@@ -1,4 +1,5 @@
-# Hyprland Keybindings
+<details>
+<summary> Hyprland Keybindings </summary>
 
 ## General Bindings
 - **Launch Kitty Terminal**: `SUPER + Return`
@@ -9,23 +10,10 @@
 - **Toggle Pseudotile Mode**: `SUPER + P`
 - **Toggle Split Mode**: `SUPER + T`
 
-## Focus Movement
-- **Move Focus Left**: `SUPER + h`
-- **Move Focus Right**: `SUPER + l`
-- **Move Focus Up**: `SUPER + k`
-- **Move Focus Down**: `SUPER + j`
-
-## Window Movement
-- **Move Window Left**: `SUPER + SHIFT + h`
-- **Move Window Right**: `SUPER + SHIFT + l`
-- **Move Window Up**: `SUPER + SHIFT + k`
-- **Move Window Down**: `SUPER + SHIFT + j`
-
-## Window Resizing
-- **Resize Window Left**: `SUPER + CTRL + h` (decrease width)
-- **Resize Window Right**: `SUPER + CTRL + l` (increase width)
-- **Resize Window Up**: `SUPER + CTRL + k` (decrease height)
-- **Resize Window Down**: `SUPER + CTRL + j` (increase height)
+## Vim-like Navigation Bindings
+- **Move Focus**: `SUPER + h/j/k/l`
+- **Move Window**: `SUPER + SHIFT + h/j/k/l`
+- **Resize Window**: `SUPER + CTRL + h/j/k/l`
 
 ## Workspace Management
 - **Switch to Workspace [1-10]**: `SUPER + [1-0]`
@@ -39,5 +27,5 @@
 ## Mouse Bindings
 - **Move Window with Drag**: `SUPER + Left Mouse Button`
 - **Resize Window with Drag**: `SUPER + Right Mouse Button`
-
+</details>
 

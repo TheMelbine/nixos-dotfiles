@@ -1,14 +1,5 @@
 { config, pkgs, ... }: {
 
-  programs.kitty = {
-    enable = true;
-    settings = {
-      font_size = 13;
-      background_opacity = "0.3";
-      window_padding_width = 10;
-    };
-  };
-
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
@@ -24,16 +15,5 @@
     };
   };
 
-  programs.oh-my-posh = {
-    enable = true;
-    enableFishIntegration = true;
-    settings = builtins.fromJSON (builtins.readFile ./custom_tiwahu.json);
-  };
-
-  programs.zoxide.enableFishIntegration = true;
-  programs.zoxide.enable = true;
-  programs.zoxide.options = [
-    "--cmd cd"
-  ];
 }
 

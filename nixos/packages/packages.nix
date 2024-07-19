@@ -29,9 +29,12 @@ in {
     vscode
     python3
 
+davinci-resolve
     # System utilities
+    ags
     wget
     kitty
+    yazi
     zoxide
     xdg-utils
     nfs-utils
@@ -41,6 +44,9 @@ in {
 
     # Multimedia
     vlc
+
+    # Editor photo & video
+    davinci-resolve-studio
 
     # Gaming
     xboxdrv

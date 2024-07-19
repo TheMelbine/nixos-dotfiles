@@ -14,27 +14,24 @@
     ags.url = "github:Aylur/ags";
   };
 
-
-
-  outputs = inputs@{ self, nixpkgs, ... }: {
-
+  outputs = inputs@{ self, nixpkgs, ... }:{
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
 
-     modules = [
-         ./nixos/configuration.nix
-	 inputs.home-manager.nixosModules.home-manager
-          {
-	    home-manager.backupFileExtension = "backup";
-	    home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.melbine = import ./home-manager/home.nix;
-          }
-
+      modules = [
+        ./nixos/configuration.nix
+        inputs.home-manager.nixosModules.home-manager
+        {
+          home-manager.backupFileExtension = "backup";
+          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.melbine = import ./home-manager/home.nix;
+        }
 
       ];
     };
   };
 }
+

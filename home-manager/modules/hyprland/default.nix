@@ -13,6 +13,7 @@
         "XDG_SESSION_DESKTOP,Hyprland"
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,/home/melbine/Pictures/Screenshots"
+	"EDITOR,nvim"
       ];
 
       debug = {

@@ -1,12 +1,13 @@
 {
 imports = [
-./firefox.nix
-./kitty.nix
-./fish.nix
-./hyprland.nix
-./neovim.nix
-./agsWidgets/ags.nix 
-./cursor.nix
-./discordKrispPatch/discordKrisp.nix
+./firefox/default.nix
+./kitty/default.nix
+./fish/default.nix
+./hyprland/default.nix
+./neovim/default.nix
+./agsWidgets/default.nix 
+./cursor/default.nix
+./discordKrispPatch/default.nix
+./zoxide/default.nix
 ];
 }

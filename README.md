@@ -5,7 +5,7 @@ This repository contains my personal configurations for Home-Manager and NixOS, 
 
 ## 💻 Desktop preview
 
-<img src="https://i.imgur.com/wbRhA1a.png" alt="Desktop Preview">
+<img src="https://imgur.com/uNzPdub" alt="Desktop Preview">
 
 > ⚠️ **Warning**  
 > These dotfiles are still under development. If anyone wishes to use them, please do so at your own risk.

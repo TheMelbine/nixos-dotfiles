@@ -9,5 +9,6 @@ imports = [
 ./cursor/default.nix
 ./discordKrispPatch/default.nix
 ./zoxide/default.nix
+./ohMyPosh/default.nix
 ];
 }

@@ -5,6 +5,6 @@ let
   toggleScript = import ./scripts/toggle.nix { inherit pkgs; };
 in
   {
-    inherit nerdFontsSymbols toggleScript;
+    inherit nerdFontsSymbols toggleScript config;
   }
 

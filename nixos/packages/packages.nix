@@ -29,9 +29,9 @@ in {
     vscode
     python3
 
-davinci-resolve
     # System utilities
-    ags
+    customPackages.ags
+    fzf
     wget
     kitty
     yazi
@@ -46,7 +46,6 @@ davinci-resolve
     vlc
 
     # Editor photo & video
-    davinci-resolve-studio
 
     # Gaming
     xboxdrv
@@ -76,6 +75,7 @@ davinci-resolve
     hyprpicker
     rofi-wayland
     wl-color-picker
+    papirus-icon-theme
 
     # Password management
     bitwarden-desktop

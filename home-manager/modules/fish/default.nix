@@ -10,12 +10,8 @@ zoxide init fish | source
 alias cd="z"
     '';
 
-    functions = {
-      nvim = ''
-        kitty @ set-spacing padding=10
-        command nvim $argv
-        kitty @ set-spacing padding=10
-      '';
+
+functions = {
       config = ''
         function config
           if test (count $argv) -eq 0

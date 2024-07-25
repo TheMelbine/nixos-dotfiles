@@ -13,7 +13,6 @@
     };
     ags.url = "github:Aylur/ags";
   };
-
   outputs = inputs@{ self, nixpkgs, ... }:{
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };

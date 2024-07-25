@@ -32,7 +32,6 @@
         gaps_out = 12;
         border_size = 2;
         "col.active_border" = "rgba(657452ee)";
-        "col.inactive_border" = "rgba(595959aa)";
         layout = "dwindle";
       };
 
@@ -80,11 +79,15 @@
         disable_hyprland_logo = true;
         force_default_wallpaper = 0;
       };
-
+      layerrule = [
+      "blur,bar"
+      ];
       windowrule = [];
 
       exec-once = [
-        "swww-daemon --format xrgb"
+       "ags -c ~/nix/home-manager/modules/agsWidgets/ags/config.js"
+       "swww-daemon --format xrgb"
+       "monitor-restart -d \"$HOME/nix/home-manager/modules/agsWidgets/ags\" -p \"ags -c ~/nix/home-manager/modules/agsWidgets/ags/config.js\" -r"
       ];
 
       bind = [

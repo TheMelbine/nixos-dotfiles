@@ -20,7 +20,8 @@ in {
   ];
 
   environment.systemPackages = with pkgs; [
-
+    nodejs
+    tree-sitter
     # Development tools
     git
     gcc
@@ -30,22 +31,23 @@ in {
     python3
 
     # System utilities
-    customPackages.ags
+    customPackages.ags 
     fzf
+    sass
     wget
     kitty
     yazi
     zoxide
     xdg-utils
     nfs-utils
+    inotify-tools
 
     # Custom utilities
     customPackages.toggleScript
+    customPackages.monitorRestartScript
 
     # Multimedia
     vlc
-
-    # Editor photo & video
 
     # Gaming
     xboxdrv

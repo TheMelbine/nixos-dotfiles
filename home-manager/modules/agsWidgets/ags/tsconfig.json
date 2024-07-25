@@ -7,11 +7,11 @@
     ],
     "allowJs": true,
     "checkJs": true,
-    "strict": true,
+    "strict": false,
     "noImplicitAny": false,
     "baseUrl": ".",
     "typeRoots": [
-      "./types"
+      "./types/*"
     ],
     "skipLibCheck": true
   }

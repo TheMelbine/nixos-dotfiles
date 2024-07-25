@@ -80,14 +80,14 @@
         force_default_wallpaper = 0;
       };
       layerrule = [
-      "blur,bar"
+      "blur,topBar"
       ];
       windowrule = [];
 
       exec-once = [
-       "ags -c ~/nix/home-manager/modules/agsWidgets/ags/config.js"
+       "ags -c ~/nix/home-manager/modules/agsWidgets/ags/windows/main.js"
        "swww-daemon --format xrgb"
-       "monitor-restart -d \"$HOME/nix/home-manager/modules/agsWidgets/ags\" -p \"ags -c ~/nix/home-manager/modules/agsWidgets/ags/config.js\" -r"
+       "monitor-restart -d \"$HOME/nix/home-manager/modules/agsWidgets/ags/windows\" -p \"ags -c ~/nix/home-manager/modules/agsWidgets/ags/windows/main.js\" -r"
       ];
 
       bind = [

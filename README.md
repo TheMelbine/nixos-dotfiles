@@ -1,6 +1,9 @@
+<p align="center">
+<img src="https://i.ibb.co/pJbn0Xz/output-onlinepngtools-1.png" width="200" >
+</p>
 <h1 align="center">themelbine/nixos-dotfiles</h1>
 
-<img src="https://i.ibb.co/dQkYXwP/image.png" alt="Desktop Preview" >
+<img src="https://i.ibb.co/0mvqMF0/image.png" alt="Desktop Preview" >
 I generally try to keep this screenshot in the atcual state of the main branch, so you can imagine what you end up with 
 
 

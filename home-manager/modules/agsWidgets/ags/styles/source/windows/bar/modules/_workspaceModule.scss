@@ -1,0 +1,24 @@
+.workspaces {
+    &__item {
+        border-radius: 4px;
+        min-height: 15px;
+        min-width: 15px;
+        background: #606e4e42;
+        margin: 5px 5px;
+        transition: all 0.2s ease-out;
+      &:hover{
+        background: #98C379;
+      }
+      &:active{
+        min-width: 20px;
+      }
+        &--focused {
+            min-width: 30px;
+            background: #98C379;
+        }
+
+        &--occupied {
+            background: #606E4E;
+        }
+    }
+}

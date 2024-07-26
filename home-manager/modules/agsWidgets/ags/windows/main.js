@@ -1,5 +1,5 @@
 import { exec, monitorFile } from 'resource:///com/github/Aylur/ags/utils.js';
-import { Bar }  from './bar/WindowBar.js';
+import { Bar }  from './bar/barWindow.js';
 
 const topBar = Widget.Window({
     cursor: "default",

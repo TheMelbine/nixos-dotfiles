@@ -1,34 +1,19 @@
 @import 'base/reset';
+@import 'windows/bar/barWindow';
 
 #topBar{
     background: rgba(0, 0, 0, 0.3);
     padding: 15px 5px;
+    border-radius: 6px;
 }
 .topBar{
-    padding: 25px 25px;
+
+    padding: 10px 25px;
 }
 
 
-.workspaces {
-   
-    &__item {
-        border-radius: 5px;
-        min-height: 15px;
-        min-width: 15px;
-        background: #606E4E;
-        margin: 5px 5px;
-        transition: min-width 0.05s linear;
-        &_focused{
-            @extend .workspaces__item;
-            transition: min-width 0.05s linear;
-          
-            min-height: 15px;
-            min-width: 30px;
-            margin: 5px 5px;
-            background: #98C379;
-        }
-    }
-}
+
+
 
 
 

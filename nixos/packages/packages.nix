@@ -20,8 +20,7 @@ in {
   ];
 
   environment.systemPackages = with pkgs; [
-    nodejs
-    tree-sitter
+	dart-sass
     # Development tools
     git
     gcc

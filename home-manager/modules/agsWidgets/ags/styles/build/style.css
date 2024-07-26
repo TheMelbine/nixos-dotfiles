@@ -1,9 +1,34 @@
-#topBar {
-  border-radius: 6px;
-  background-color: rgba(0, 0, 0, 0.3); }
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  text-shadow: 0 0 black;
+}
 
-.test {
-  color: white;
-  padding: 15px; }
+#topBar {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px 5px;
+}
+
+.topBar {
+  padding: 25px 25px;
+}
+
+.workspaces__item, .workspaces__item_focused {
+  border-radius: 5px;
+  min-height: 15px;
+  min-width: 15px;
+  background: #606E4E;
+  margin: 5px 5px;
+  transition: min-width 0.05s linear;
+}
+.workspaces__item_focused {
+  transition: min-width 0.05s linear;
+  min-height: 15px;
+  min-width: 30px;
+  margin: 5px 5px;
+  background: #98C379;
+}
 
 /*# sourceMappingURL=style.css.map */

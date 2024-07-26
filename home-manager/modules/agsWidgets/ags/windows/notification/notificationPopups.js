@@ -105,7 +105,9 @@ export function NotificationPopups(monitor = 0) {
         list.children.find(n => n.attribute.id === id)?.destroy()
     }
 
+    // @ts-ignore
     list.hook(notifications, onNotified, "notified")
+        // @ts-ignore
         .hook(notifications, onDismissed, "dismissed")
 
     return Widget.Window({

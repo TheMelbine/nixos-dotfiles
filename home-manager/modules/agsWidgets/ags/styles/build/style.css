@@ -43,13 +43,14 @@
   margin-right: 20px;
 }
 .appLauncherModule__button {
-  min-width: 35px;
+  min-width: 37px;
+  min-height: 37px;
   background: #32362A;
 }
 .appLauncherModule .appLauncherModule__icon {
   padding: 5px;
-  font-size: 25px;
-  transition: all 0.1s ease-out; /* Плавный переход для иконки */
+  font-size: 26px;
+  transition: all 0.15s ease-out; /* Плавный переход для иконки */
 }
 
 .appLauncherModule__button:hover .appLauncherModule__icon {

@@ -1,14 +1,19 @@
+<p align="center">
+<img src="https://i.ibb.co/pJbn0Xz/output-onlinepngtools-1.png" width="200" >
+</p>
 <h1 align="center">themelbine/nixos-dotfiles</h1>
 
+<img src="https://i.ibb.co/0mvqMF0/image.png" alt="Desktop Preview" >
+I generally try to keep this screenshot in the atcual state of the main branch, so you can imagine what you end up with 
+
+
 # 🗒 About
-This repository contains my personal configurations for Home-Manager and NixOS, enhanced with select external elements. It is designed to provide a robust and flexible setup for various systems.
 
-## 💻 Desktop preview
+>I started using NixOS about a month ago. The main goal of this repository is to create the most modal and logical system possible. I'm tired of complex systems that take days to figure out. This repository is primarily for myself, but I don't mind if others use it as well.
 
-<img src="https://i.ibb.co/dQkYXwP/image.png" alt="Desktop Preview">
-
-> ⚠️ **Warning**  
+> [!Warning]  
 > These dotfiles are still under development. If anyone wishes to use them, please do so at your own risk.
+
 
 ## Hyprland Keybinds ⌨️
 <details>
@@ -49,3 +54,5 @@ This repository contains my personal configurations for Home-Manager and NixOS, 
 > - **Resize Window with Drag**: `SUPER + Right Mouse Button`
 </details>
 
+> [!NOTE]
+> I am happy to get feedback, feel free to create PRs and open issues.

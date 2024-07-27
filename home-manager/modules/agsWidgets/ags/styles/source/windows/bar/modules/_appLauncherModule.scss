@@ -1,31 +1,23 @@
-.appLauncherModule{
+.appLauncherModule {
     margin-right: 20px;
-    &__button{
+
+    &__button {
         min-width: 37px;
         min-height: 37px;
         background: #32362A;
-     &:hover{
 
-     }
-     &:active{
-   
-     }
+        &:hover .appLauncherModule__icon {
+            -gtk-icon-transform: rotate(180deg);
+        }
+
+        &:active .appLauncherModule__icon {
+            font-size: 20px;
+        }
     }
-    .appLauncherModule__icon{
+
+    &__icon {
         padding: 5px;
         font-size: 26px;
-        transition: all 0.15s ease-out; /* Плавный переход для иконки */
+        transition: all 0.15s ease-out;
     }
-}
-
-
-.appLauncherModule__button:hover .appLauncherModule__icon {
-    
-    -gtk-icon-transform: rotate(180deg);
-        
-
-}
-
-.appLauncherModule__button:active .appLauncherModule__icon {
-    font-size: 20px;
 }

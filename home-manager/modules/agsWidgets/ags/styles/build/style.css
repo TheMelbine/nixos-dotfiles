@@ -47,18 +47,16 @@
   min-height: 37px;
   background: #32362A;
 }
-.appLauncherModule .appLauncherModule__icon {
-  padding: 5px;
-  font-size: 26px;
-  transition: all 0.15s ease-out; /* Плавный переход для иконки */
-}
-
 .appLauncherModule__button:hover .appLauncherModule__icon {
   -gtk-icon-transform: rotate(180deg);
 }
-
 .appLauncherModule__button:active .appLauncherModule__icon {
   font-size: 20px;
+}
+.appLauncherModule__icon {
+  padding: 5px;
+  font-size: 26px;
+  transition: all 0.15s ease-out;
 }
 
 #topBar {

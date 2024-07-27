@@ -10,8 +10,6 @@ export const appLauncherModule = () =>{
         child: Widget.Icon({
             className: "appLauncherModule__icon",
             icon: 'nixos-green-logo',
-         
-            
         }) 
     });
 

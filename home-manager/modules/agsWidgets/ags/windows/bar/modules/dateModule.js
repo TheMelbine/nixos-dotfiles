@@ -14,5 +14,5 @@ setInterval(() => {
 
 export const TimeModule = () => Widget.Label({
     label: currentTime.bind(),
-    className: "timeModule" // Добавляем класс для стилизации
+    className: "timeModule" 
 });

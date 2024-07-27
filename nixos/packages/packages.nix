@@ -20,8 +20,7 @@ in {
   ];
 
   environment.systemPackages = with pkgs; [
-	dart-sass
-    # Development tools
+	    # Development tools
     git
     gcc
     fpc
@@ -37,6 +36,8 @@ in {
     kitty
     yazi
     zoxide
+	ffmpeg
+	dart-sass
     xdg-utils
     nfs-utils
     inotify-tools

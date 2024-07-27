@@ -1,8 +1,10 @@
-import { TimeModule }from "./modules/dateModule.js"
+import { appLauncherModule } from "./modules/appLauncherModule.js"
+import { TimeModule } from "./modules/dateModule.js"
 import { WorkspacesModule } from "./modules/workspacesModule.js"
 
 const Left = () => Widget.Box({
     children: [
+        appLauncherModule(),
         WorkspacesModule(),
     ]
 })

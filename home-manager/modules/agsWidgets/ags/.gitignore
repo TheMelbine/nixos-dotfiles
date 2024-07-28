@@ -1,5 +1,5 @@
 .vscode/
 .env 
-.styles/build/
+.styles/build
 .types/
 tsconfig.js

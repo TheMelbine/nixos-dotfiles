@@ -6,7 +6,7 @@ export const appLauncherModule = () =>{
     Widget.Button({
         cursor: 'pointer',
         className: "appLauncherModule__button",
-        onClicked: () => exec(''),
+        onClicked: () => App.openWindow('applauncher'),
         child: Widget.Icon({
             className: "appLauncherModule__icon",
             icon: 'nixos-green-logo',

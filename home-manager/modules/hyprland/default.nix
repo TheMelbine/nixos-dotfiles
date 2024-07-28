@@ -81,6 +81,8 @@
       };
       layerrule = [
       "blur,topBar"
+	  "blur, applauncher"
+	  "ignorezero, applauncher"
       ];
       windowrule = [];
 
@@ -95,7 +97,7 @@
         "$mainMod, Q, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, F, fullscreen,"
-        "$mainMod, D, exec, toggle rofi -show drun"
+        "$mainMod, D, exec, ags -t applauncher"
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, T, togglesplit, # dwindle"
 

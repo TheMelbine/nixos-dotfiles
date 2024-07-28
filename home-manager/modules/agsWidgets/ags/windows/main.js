@@ -1,5 +1,6 @@
 import { exec, monitorFile } from 'resource:///com/github/Aylur/ags/utils.js';
 import { Bar }  from './bar/barWindow.js';
+import { Applauncher } from './applauncher/applauncherWindow.js';
 
 const topBar = Widget.Window({
     cursor: "default",
@@ -9,20 +10,33 @@ const topBar = Widget.Window({
     exclusivity: "exclusive",
     layer: 'bottom',
     margins: [12, 12, 0, 12],
+});
+const WINDOW_NAME = "applauncher"
+
+const applauncher = Widget.Window({
+    name: WINDOW_NAME,
+    setup: self => self.keybind("Escape", () => {
+        App.closeWindow(WINDOW_NAME)
+    }),
+    visible: false,
+    keymode: "exclusive",
+    child: Applauncher({
+    }),
 })
-const StylesConfigDir = '/home/melbine/nix/home-manager/modules/agsWidgets/ags/styles'
+
+
+
+const StylesConfigDir = '/home/melbine/nix/home-manager/modules/agsWidgets/ags/styles';
 
 App.config({
-  windows: [topBar],
+  windows: [topBar, applauncher],
   style: `${StylesConfigDir}/build/style.css`,
   icons: `${StylesConfigDir}/source/assets`,
- });
- 
+});
 
-
- const applyCss = () => {
+const applyCss = async () => {
   try {
-      exec(`dart-sass ${StylesConfigDir}/source/main.scss ${StylesConfigDir}/build/style.css --no-charset`);
+      await exec(`dart-sass ${StylesConfigDir}/source/main.scss ${StylesConfigDir}/build/style.css --no-charset`);
       console.log("Scss compiled");
 
       App.resetCss();
@@ -41,8 +55,6 @@ App.config({
 
 applyCss();
 
-
 monitorFile(`${StylesConfigDir}/source`, () => {
   applyCss();
 });
-

@@ -1,3 +1,4 @@
 .vscode/
 .env 
 .styles/build/
+.types/

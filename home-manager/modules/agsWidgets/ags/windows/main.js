@@ -20,7 +20,6 @@ App.config({
  
 
 
-console
  const applyCss = () => {
   try {
       exec(`dart-sass ${StylesConfigDir}/source/main.scss ${StylesConfigDir}/build/style.css --no-charset`);
@@ -39,6 +38,9 @@ console
       }
   }
 }
+
+applyCss();
+
 
 monitorFile(`${StylesConfigDir}/source`, () => {
   applyCss();

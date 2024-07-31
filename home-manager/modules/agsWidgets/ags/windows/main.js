@@ -1,7 +1,7 @@
 import { exec, monitorFile } from 'resource:///com/github/Aylur/ags/utils.js';
 import { Bar }  from './bar/barWindow.js';
 import { Applauncher } from './applauncher/applauncherWindow.js';
-
+import {NotificationPopups} from './notification/notificationPopups.js'
 const topBar = Widget.Window({
     cursor: "default",
     name: 'topBar',
@@ -29,7 +29,7 @@ const applauncher = Widget.Window({
 const StylesConfigDir = '/home/melbine/nix/home-manager/modules/agsWidgets/ags/styles';
 
 App.config({
-  windows: [topBar, applauncher],
+  windows: [topBar, applauncher,NotificationPopups()],
   style: `${StylesConfigDir}/build/style.css`,
   icons: `${StylesConfigDir}/source/assets`,
 });

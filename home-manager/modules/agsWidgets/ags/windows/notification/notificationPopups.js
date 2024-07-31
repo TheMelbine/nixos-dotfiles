@@ -1,6 +1,5 @@
 const notifications = await Service.import("notifications")
 
-/** @param {import('resource:///com/github/Aylur/ags/service/notifications.js').Notification} n */
 function NotificationIcon({ app_entry, app_icon, image }) {
     if (image) {
         return Widget.Box({
@@ -23,7 +22,7 @@ function NotificationIcon({ app_entry, app_icon, image }) {
     })
 }
 
-/** @param {import('resource:///com/github/Aylur/ags/service/notifications.js').Notification} n */
+
 function Notification(n) {
     const icon = Widget.Box({
         vpack: "start",
@@ -95,19 +94,18 @@ export function NotificationPopups(monitor = 0) {
         children: notifications.popups.map(Notification),
     })
 
-    function onNotified(_, /** @type {number} */ id) {
+    function onNotified(_,id) {
         const n = notifications.getNotification(id)
         if (n)
             list.children = [Notification(n), ...list.children]
     }
 
-    function onDismissed(_, /** @type {number} */ id) {
+    function onDismissed(_,id) {
         list.children.find(n => n.attribute.id === id)?.destroy()
     }
 
     // @ts-ignore
     list.hook(notifications, onNotified, "notified")
-        // @ts-ignore
         .hook(notifications, onDismissed, "dismissed")
 
     return Widget.Window({

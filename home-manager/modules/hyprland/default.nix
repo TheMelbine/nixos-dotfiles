@@ -83,6 +83,8 @@
       "blur,topBar"
 	  "blur, applauncher"
 	  "ignorezero, applauncher"
+	  "blur,notifications0"
+	  "ignorezero, notifications0"
       ];
       windowrule = [];
 

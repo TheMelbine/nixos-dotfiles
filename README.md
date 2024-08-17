@@ -5,7 +5,7 @@
 
 
 I generally try to keep this screenshot in the atcual state of the main branch, so you can imagine what you end up with 
-<img src="https://i.imgur.com/ljAdFJE.png" alt="Desktop Preview" >
+<img src="https://i.imgur.com/SKEOXom.png" alt="Desktop Preview" >
 
 # 🗒 About
 
